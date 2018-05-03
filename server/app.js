@@ -20,7 +20,6 @@ import bodyParser from 'koa-bodyparser';
 import jwtKoa from 'koa-jwt';
 import mongoose from 'mongoose';
 
-import { secret } from './utils/secret';
 import clientRouter from './router/client';
 import serverRouter from './router/server';
 
@@ -53,17 +52,6 @@ app.use(logger());
 
 app.use(bodyParser());
 
-/**
- * use jwt to check auth
- *
- * except method is GET or path in array
- */
-app.use(jwtKoa({
-  secret
-}).unless({
-  method: 'GET',
-  path: [/^\/(?!sys(\/|$)).+/],
-}));
 
 /**
  * error handle
