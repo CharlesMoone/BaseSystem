@@ -1,0 +1,16 @@
+.DS_Store
+*/.DS_Store
+
+.env
+
+dist/*
+
+node_modules
+
+server/utils/secret.js
+
+public/bundle.js
+public/*.bundle.js
+
+uploads/*
+downloads/*

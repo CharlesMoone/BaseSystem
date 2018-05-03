@@ -1,0 +1,8 @@
+{
+  "presets": ["react", "env", "stage-0"],
+  "plugins": [
+    "babel-plugin-transform-class-properties",
+    "transform-decorators-legacy",
+    ["import", [{ "libraryName": "antd", "libraryDirectory": "es", "style": "css" }, { "libraryName": "antd-mobile", "libraryDirectory": "es", "style": "css" }]],
+  ],
+}
